@@ -45,9 +45,13 @@ def my_count(nums, value):
     nums: list of integers
     value: integers
     Returns: integer
-    Example: my_count([1, 2, 3, 1], 1) retruns 2
+    Example: my_count([1, 2, 3, 1], 1) returns 2
     """
-
+    count=0
+    for num in nums:
+        if num == value:
+            count+=1
+    return count
 
 def my_index(sentence, word):
     """
@@ -58,7 +62,21 @@ def my_index(sentence, word):
     Returns: non-negative integer or None
     Example: my_index('bye bye', 'ye') returns 1
     """
+    index = []
+    length=range(len(sentence))
+    i=0
+    for n in length:
+        if sentence[n]==word[i]:
+            if len(word)>1 and sentence[n+1] == word[i+1]:
+                index.append(n)
+            else:
+                index.append(n)
+        if word not in sentence:
+          return None
 
+    if(len(index)>0):
+        index=index[0]
+    return index
 
 if __name__ == '__main__':
     # Testing my_len()
@@ -66,8 +84,20 @@ if __name__ == '__main__':
     expected_result = my_len(word)
     print(f'my_len("{word}") returns {expected_result}')
 
-
+    # Testing my_find()
     word = 'dog'
     letter='o'
     expected_result = my_find(word,letter)
-    print(f'my_find("{word}") returns {expected_result}')
+    print(f'my_find("{word}",{letter}) returns {expected_result}')
+
+    # Testing my_count()
+    nums = [1, 2, 3, 1]
+    value = 1
+    expected_result = my_count(nums,value)
+    print(f'my_count({nums},{value}) returns {expected_result}')
+
+    # Testing my_index()
+    sentence="bye bye"
+    word="ye"
+    expected_result = my_index(sentence, word)
+    print(f'my_index("{sentence}",{word}) returns {expected_result}')
