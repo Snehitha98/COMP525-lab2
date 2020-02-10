@@ -30,7 +30,14 @@ def my_find(word, letter):
     Example:
         my_find('dog', 'o') returns True
     """
-
+    length=range(len(word))
+    for k in length:
+      if letter == word[k]:
+        result="True"
+        break
+      else:
+        result="False"
+    return result
 
 def my_count(nums, value):
     """
@@ -58,3 +65,9 @@ if __name__ == '__main__':
     word = 'abc'
     expected_result = my_len(word)
     print(f'my_len("{word}") returns {expected_result}')
+
+
+    word = 'dog'
+    letter='o'
+    expected_result = my_find(word,letter)
+    print(f'my_find("{word}") returns {expected_result}')
