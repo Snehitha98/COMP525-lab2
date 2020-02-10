@@ -83,6 +83,15 @@ if __name__ == '__main__':
     word = 'abc'
     expected_result = my_len(word)
     print(f'my_len("{word}") returns {expected_result}')
+    # test_case1_for_my_len()
+    word = 'snehitha loves dance'
+    expected_result = my_len(word)
+    print(f'my_len("{word}") returns {expected_result}')
+    # test_case2_for_my_len()
+    word = '  '
+    expected_result = my_len(word)
+    print(f'my_len("{word}") returns {expected_result}')
+
 
     # Testing my_find()
     word = 'dog'
