@@ -127,10 +127,18 @@ if __name__ == '__main__':
     print(f'my_count({nums},{value}) returns {expected_result}')
 
 
-
-
     # Testing my_index()
     sentence="bye bye"
     word="ye"
+    expected_result = my_index(sentence, word)
+    print(f'my_index("{sentence}",{word}) returns {expected_result}')
+    # test_case1_for_my_index()
+    sentence="python"
+    word="h"
+    expected_result = my_index(sentence, word)
+    print(f'my_index("{sentence}",{word}) returns {expected_result}')
+    # test_case2_for_my_index()
+    sentence="data"
+    word="e"
     expected_result = my_index(sentence, word)
     print(f'my_index("{sentence}",{word}) returns {expected_result}')
