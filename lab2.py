@@ -98,6 +98,17 @@ if __name__ == '__main__':
     letter='o'
     expected_result = my_find(word,letter)
     print(f'my_find("{word}",{letter}) returns {expected_result}')
+    # test_case1_for_my_find()
+    word = 'snehitha'
+    letter='g'
+    expected_result = my_find(word,letter)
+    print(f'my_find("{word}",{letter}) returns {expected_result}')
+    # test_case2_for_my_find()
+    word = 'data structures'
+    letter=' '
+    expected_result = my_find(word,letter)
+    print(f'my_find("{word}",{letter}) returns {expected_result}')
+
 
     # Testing my_count()
     nums = [1, 2, 3, 1]
