@@ -1,7 +1,7 @@
 """
 lab2.py
 Mihaela Sabin
-Creaated February 4, 2020
+Created February 4, 2020
 Practice with sequence traversal and string processing
 """
 
@@ -15,7 +15,10 @@ def my_len(word):
 
     Example: my_len('abc') returns 3
     """
-
+    length=0
+    for char in word:
+        length=length+1
+    return length
 
 def my_find(word, letter):
     """
@@ -52,6 +55,6 @@ def my_index(sentence, word):
 
 if __name__ == '__main__':
     # Testing my_len()
-    test_case = 'abc'
-    expected_result = my_len(test_case)
-    print(f'my_len("{test_case}") returns {expected_result}')
+    word = 'abc'
+    expected_result = my_len(word)
+    print(f'my_len("{word}") returns {expected_result}')
