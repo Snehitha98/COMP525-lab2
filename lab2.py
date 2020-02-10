@@ -115,6 +115,19 @@ if __name__ == '__main__':
     value = 1
     expected_result = my_count(nums,value)
     print(f'my_count({nums},{value}) returns {expected_result}')
+    # test_case1_for_my_count()
+    nums = [3, 6, 7, 9]
+    value = 2
+    expected_result = my_count(nums,value)
+    print(f'my_count({nums},{value}) returns {expected_result}')
+    # test_case2_for_my_count()
+    nums = [4, 4, 4, 4, 4]
+    value = 4
+    expected_result = my_count(nums,value)
+    print(f'my_count({nums},{value}) returns {expected_result}')
+
+
+
 
     # Testing my_index()
     sentence="bye bye"
